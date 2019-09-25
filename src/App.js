@@ -1,7 +1,10 @@
 import React from 'react';
+
+import NewsList from './components/NewsList';
+
 import './App.css';
 
-const list = [
+const stories = [
   {
     title: 'React',
     url: 'https://reactjs.org/',
@@ -30,24 +33,29 @@ const list = [
 
 
 
-function App() {
-  return (
-    <div className="App">
-     {
-       
-       list.map(item =>
-        <>
-        <span>
-          <a href={item.url}><h3>{item.title}</h3></a>
-        </span>
-        <span>{item.points}</span>
-        <span><p>{item.author}</p></span>
-       </>
-       )
-       
-     }
-    </div>
-  );
-}
+class App extends React.Component {
+  constructor() {
+    super()
 
-export default App;
+    this.state= {
+      stories,
+    }
+  }
+  render(){
+    const { stories } = this.state
+    return (
+      <div className="App">
+       <NewsList stories={stories} />
+      </div>
+    );
+    }
+
+  }
+
+
+  export default App;
+
+
+
+
+
