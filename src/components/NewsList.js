@@ -9,7 +9,7 @@ const NewsList = props => {
        <NewsListWrapper>
         {
             props.stories.map(story => (
-                <Story key={story.id} story={story} />
+                <Story story={story} />
             )
           )
         }

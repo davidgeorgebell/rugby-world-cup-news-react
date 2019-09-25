@@ -6,6 +6,7 @@ export const Story = props => (
     <StoryWrapper>
         <h2>{props.story.title}</h2>
         <p>{props.story.author}</p>
+        <p>{props.story.articles}</p>
     </StoryWrapper>
 )
 
