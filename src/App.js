@@ -1,5 +1,7 @@
 import React from 'react';
 import NewsList from './components/NewsList';
+
+import styled from 'styled-components'
 import './App.css';
 
 const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
@@ -31,6 +33,7 @@ class App extends React.Component {
       <div className="App">
       <h1>Top Rugby World Cup 2019 News <span role='img' aria-label='ball'>🏉</span></h1>
        <NewsList stories={stories} />
+       <NewsApi href='https://newsapi.org/'>newsapi.org</NewsApi>
       </div>
     );
     }
@@ -39,6 +42,14 @@ class App extends React.Component {
 
 
   export default App;
+
+  const NewsApi = styled.a`
+      margin: 10px;
+      text-decoration: none;
+      color: white;
+      opacity: 0.2;
+     
+  `;
 
 
 
