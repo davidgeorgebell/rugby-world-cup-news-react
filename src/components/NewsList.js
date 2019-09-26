@@ -9,7 +9,7 @@ const NewsList = props => {
        <NewsListWrapper>
         {
             props.stories.map(story => (
-                <Story story={story} />
+                <Story key={story.url} story={story} />
             )
           )
         }
@@ -21,9 +21,10 @@ const NewsList = props => {
 export default NewsList;
 
 const NewsListWrapper = styled.div`
-      width: 85vw;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: none;
+      width: 80vw;
 `;
