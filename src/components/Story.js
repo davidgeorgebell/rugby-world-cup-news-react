@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export const Story = props => (
     
     <StoryWrapper>
-        <a href={props.story.url}>
+        <a target='blank' href={props.story.url}>
         <h3 className='title'>{props.story.title}</h3>
         <p>{props.story.source.name}</p>
         </a>
